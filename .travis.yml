@@ -4,6 +4,6 @@ python:
   - 3.6
 os: linux
 install:
-  - sudo apt-get install sucrose;
+  - sudo apt install autoconf;
   
 script: python forvideo.py
