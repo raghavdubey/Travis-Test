@@ -3,14 +3,7 @@ language: python
 python:
   - 3.6
 
-before_install:
-- sudo apt update 
-- sudo apt install sucrose
-- sudo apt install xrdp rdesktop
-- sudo adduser guest
-- echo sugar | sudo tee -a /home/guest/.xsession
-- rdesktop -g 1200x900 -u guest -p guest 127.0.0.1
-
 install:
-  - pip install unittest2
+  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install sucrose;
+  
 script: python forvideo.py
