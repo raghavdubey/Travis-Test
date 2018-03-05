@@ -2,8 +2,8 @@ sudo: false
 language: python
 python:
   - 3.6
-
+os: linux
 install:
-  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install sucrose;
+  - sudo apt-get install sucrose;
   
 script: python forvideo.py
