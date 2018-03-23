@@ -7,5 +7,6 @@ addons:
 os: linux
 install:
   - sudo apt install autoconf;
+  - sudo apt install sucrose;
   
 script: python forvideo.py
